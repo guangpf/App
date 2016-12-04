@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" /><!--只支持写x5内核-->
+    <meta name="screen-orientation" content="portrait">  <!--只支持uc浏览器-->
+    <meta name="x5-fullscreen" content="true" /> <!--只支持写x5内核--> 
+    <meta name="full-screen" content="yes"> <!--只支持uc浏览器<-->
+    <meta name="format-detection" content="telephone=no, email=no" /> <!--禁止是被电话号码和邮箱-->	
+    <title>一点资讯</title>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/font/iconfont.css" />
+    <link rel="stylesheet" href="css/font1/iconfont.css" />
+    <script>
+       function resize(originSize,type){
+       	  type=type||"x";
+       	  if(type=="x"){
+       	  	 var widths=document.documentElement.clientWidth;
+       	  	 var scale=widths/originSize*100+"px";
+       	  	 document.getElementsByTagName("html")[0].style.fontSize=scale;
+       	  }else if(type=="y"){
+       	  	var heights=document.documentElement.clientHeight;
+       	  	scale=heights/originSize*100+"px";
+       	  	document.getElementsByTagName("html")[0].style.fontSize=scale;
+       	  }
+       }
+       $(function(){
+       	   resize(750);
+       	   
+       	   
+       	   
+       })
+       
+    </script>
+    <style>
+    html,body{
+		margin:0;
+		padding:0;
+		width:100%;
+		height:100%;
+		box-sizing:border-box;
+		background:#fafafa;
+	}
+	p,h1,h2,h3,h4,h5,ul,li,ol,span{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+	a{
+		text-decoration:none;
+		color:#333;
+	}
+	.top{
+		width:100%;
+		height:0.9rem;
+		background:#efefef;
+		position:fixed;
+		left:0;
+		top:0;
+		z-index: 999;
+		line-height:1rem;
+		padding:0 0.15rem;
+	}
+	.top a{
+		width:100%;
+		height:100%;
+	}
+	.top .direct{
+		font-size:0.5rem;
+		float:left;
+	}
+	.top .alilogo{
+		width:0.6rem;
+		height:0.6rem;
+		float:left;
+		background:url(img/alilogo.png) no-repeat;
+		background-size:cover;
+		margin-top:0.15rem;
+		margin-left:0.2rem;
+	}
+	.top span{
+		
+		font-size:0.3rem;
+		line-height: 0.1rem;
+		float:left;
+		margin-top:0.45rem;
+		margin-left:0.2rem;
+	}
+	.top .ding{
+		width:25%;
+		height:60%;
+		background:#119aeb;
+		font-size:0.4rem;
+		float:right;
+		border-bottom-left-radius:0.3rem;
+		border-top-left-radius:0.3rem;
+		border-bottom-right-radius:0.3rem;
+		border-top-right-radius:0.3rem;
+		margin-right:0.5rem;
+		line-height:0.6rem;	
+		text-align: center;
+		margin-top:0.18rem;
+		
+	}
+	.container{
+		box-sizing:border-box
+		width:100%;
+		margin-top:1.3rem;
+		padding:0.2rem;
+	}
+	.show-tittle{
+		box-sizing: border-box;
+		font-size:40%;
+		padding:0.1rem 0;
+	}
+	.date{
+		box-sizing: border-box;
+		font-size:0.3rem;
+		color:#999999;
+		padding:0.1rem 0;
+	}
+	.main{
+		width:100%;
+		box-sizing: border-box;
+		font-size:0.3rem;
+		padding:0.2rem 0;
+	}
+	.main p{
+		box-sizing: border-box;
+		text-indent: 2em;
+		padding:0.2rem 0;
+	}
+	.main img{
+		width:100%;
+		height:5rem;
+		border:none;
+	}
+	.footer{
+		width:100%;
+		height:0.9rem;
+		box-sizing: border-box;
+		border-top:0.03rem solid #ccc;
+		position:fixed;
+		z-index: 999;
+		background:#fafafa;
+		left:0;
+		bottom:0;
+		display: flex;
+		justify-content: space-around;
+	}
+	.write{
+		width:2rem;
+		height:0.5rem;
+		border:0.03rem solid #ccc;
+		float:left;
+		border-bottom-left-radius:0.3rem;
+		border-top-left-radius:0.3rem;
+		border-bottom-right-radius:0.3rem;
+		border-top-right-radius:0.3rem;
+		background:#fff;
+		margin-top:0.16rem;
+		font-size:0.24rem;
+		line-height: 0.5rem;
+		text-align: center;
+		color:#999;
+	}
+	.message{
+		width:0.5rem;
+		height:0.5rem;
+		border:0.03rem solid #ccc;
+		border-radius:50%;
+		margin-top:0.16rem;
+		text-align: center;
+		line-height: 0.5rem;
+		color:#999;
+	}
+    </style>
+</head>
+	<body>
+		<a href=""></a>
+		<div class="top">
+			<div class="direct iconfont icon-xiangzuo"></div>
+			<div class="alilogo"></div>
+			<span>阿里巴巴</span>
+			<span style="font-size:0.24rem;color:#999;">42万人订阅</span>
+			<div class="ding">
+				+  订阅
+			</div>
+		</div>
+		</a>
+		<div class="container">
+			<p class="show-tittle">阿里巴巴为什么叫阿里巴巴？马云的解释让全场震惊！</p>
+			<p class="date">2016.9.29 <span>投资界</span></p>
+			<div class="main">
+				<p>
+				现在国内估计没有多少人不知道马云了吧？那也肯定知道他的阿里巴巴了。我相信很多朋友都跟我一样迷茫，马云当初为什么要叫阿里巴巴？阿里巴巴的名字是怎么来的？今天小编就带领大家揭晓一下这个谜底，看看马云是如何回答这个问题的。</p>
+<p>
+有一次一个公开会上，主持人曾问道马云为什么要叫阿里巴巴？马云当初想的是，应该做一个国际性的公司，因为互联网是没有国家、没有地域限制的。所以，应该起一个国际范的，当时最出名的就是雅虎了，算是一个比较知名的互联网公司。从那个时候来看，马云的眼光、格局就非一般人所能比拟。</p>
+ <img src="img/mayun.png" alt=""/> <br />
+<p>
+ 
+然后马云脑海里突然就出现了阿里巴巴这个名字，他感觉阿里巴巴这个名字一定非常好。当时，马云是在美国旧金山吃饭呢，然后他突然灵机一动问服务员，你知道阿里巴巴吗？</p>
+<p>
+服务员的回答让他很吃惊，她说知道，听说过阿里巴巴和四十大盗的故事。当马云再次追问她什么是阿里巴巴的时候，她则回答是芝麻开门。</p>
+<p>
+当时马云听到这个回答的时候，心情很激动，很兴奋，赶紧走出门外，又接连问了十几个人。这些人都能回答出阿里巴巴和四十大盗，还知道芝麻开门的这个故事。</p>
+<p>
+然后，马云当时就很确定了，这一定是一个好名字。而且还是以字母A开头，这就意味着阿里巴巴什么事情都要做到第一位。</p>
+<p>
+听了马云的解释，我觉得有几个细节需要值得大家深思：首先，做为一个企业家，眼界和格局是不能太小的，要不然无法发展壮大。马云一开始做阿里巴巴的时候，就定位的全球性国际性的。</p>
+
+<p>
+有一次一个公开会上，主持人曾问道马云为什么要叫阿里巴巴？马云当初想的是，应该做一个国际性的公司，因为互联网是没有国家、没有地域限制的。所以，应该起一个国际范的，当时最出名的就是雅虎了，算是一个比较知名的互联网公司。从那个时候来看，马云的眼光、格局就非一般人所能比拟。</p>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="write">
+				<span class="iconfont icon-xiepinglun"></span>
+				写评论
+			</div>
+			<div class="message iconfont icon-xinxi"></div>
+			<div class="message iconfont icon-shoucang"></div>
+			<div class="message iconfont icon-infenicon18 	"></div>
+			<div class="message iconfont icon-gengduodiandian 	"></div>
+		</div>
+	</body>
+</html>

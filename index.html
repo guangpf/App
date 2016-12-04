@@ -1,57 +1,324 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>App by guangpf</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">App</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/guangpf/app" class="btn">View on GitHub</a>
-      <a href="https://github.com/guangpf/app/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/guangpf/app/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" /><!--只支持写x5内核-->
+    <meta name="screen-orientation" content="portrait">  <!--只支持uc浏览器-->
+    <meta name="x5-fullscreen" content="true" /> <!--只支持写x5内核--> 
+    <meta name="full-screen" content="yes"> <!--只支持uc浏览器<-->
+    <meta name="format-detection" content="telephone=no, email=no" /> <!--禁止是被电话号码和邮箱-->	
+    <title>一点资讯</title>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/font/iconfont.css" />
+    <link rel="stylesheet" href="css/font1/iconfont.css" />
+    <script>
+       function resize(originSize,type){
+       	  type=type||"x";
+       	  if(type=="x"){
+       	  	 var widths=document.documentElement.clientWidth;
+       	  	 var scale=widths/originSize*100+"px";
+       	  	 document.getElementsByTagName("html")[0].style.fontSize=scale;
+       	  }else if(type=="y"){
+       	  	var heights=document.documentElement.clientHeight;
+       	  	scale=heights/originSize*100+"px";
+       	  	document.getElementsByTagName("html")[0].style.fontSize=scale;
+       	  }
+       }
+       $(function(){
+       	   resize(750);
+       	   
+       	   
+       	   
+       })
+       
+    </script>
+</head>
+<style>
+	html,body{
+		margin:0;
+		padding:0;
+		width:100%;
+		height:100%;
+		box-sizing:border-box;
+		background:#fafafa;
+	}
+	p,h1,h2,h3,h4,h5,ul,li,ol,span{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+	a{
+		text-decoration:none;
+		color:#333;
+	}
+	.top{
+		width:100%;
+		position:fixed;
+		top:0;left:0;
+		z-index: 999;
+	}
+	header{
+		width:100%;
+		height:0.9rem;
+		background:#119aeb;
+		line-height: 0.9rem;
+		overflow: hidden;
+	}
+	.logo{
+		width:1.8rem;
+		height:0.4rem;
+		background:url(img/logo.png) no-repeat;
+		background-size:contain;
+		float:left;
+		margin-top:0.25em;
+		margin-left:0.2rem;
+	}
+    header input{
+    	border-bottom-left-radius:25px
+    ;
+    	border-top-left-radius: 25px;
+    	 	border-bottom-right-radius:25px
+    ;
+    	border-top-right-radius: 25px;
+    	border:none;
+    	width:60%;
+    	height:50%;
+    	float:left;
+    	background:rgba(13,122,187,0.5);
+    	text-align: left;
+    	margin-top:0.23rem;
+    	margin-left:0.5rem;
+    	color:#ccc;
+    	padding-left:0.2rem;
+    }
+    .tittle{
+    	box-sizing: border-box;
+    	height:0.8rem;
+    	width:100%;
+    	border-bottom:0.03rem solid #ccc;
+    	display:flex;
+        justify-content: space-around;
+        line-height: 0.8rem;
+        background:#fafafa;
+    }
+    .tittle a{
+    	font-size:0.35rem;
+    	font-weight: bold;
+    }
+    .tittle a:first-child{
+    	color:#129beb;
+    }
+    
+    .content-list{
+    	width:100%;
+    	padding-left:0.2rem;
+    	padding-right:0.2rem;
+    	box-sizing: border-box;
+    	margin-top:1.7rem;
+    }
+    .content{
+    	width:100%;
+    	height:2rem;
+        border-bottom:0.03rem solid #ccc;
+    	box-sizing: border-box;
+    }
+      .content a{
+      	width:100%;
+      	height:100%;
+      }
+    .content-left{
+    	box-sizing: border-box;
+    	width:60%;
+    	height:100%;
+    	position:relative;
+    	float:left;
+    	padding:0.2rem 0;
+    	padding-right:0.2rem;
+    }
+     .content-right{
+     	box-sizing: border-box;
+     	padding:0.2rem 0;
+     	width:40%;
+     	height:100%;
+     	float:left;
+     }
+     .content-right img{
+     	width:100%;
+     	height:100%;
+     }
+     .content-left p{
+     	font-size:0.38rem;
+     }
+     .content-left-bot{
+     	width:100%;
+     	height:55%;
+     	line-height: 45%;
+     }
+      .content-left-bot span{
+      	font-size:0.25rem;
+      	color:#999;
+      }
+      .more{
+      	display:inline-block;
+      	width:0.4rem;
+      	height:0.3rem;
+      	background:url(img/btn.png)no-repeat 80% 80%;
+      	background-size:contain;
+      	float:right;
+      	margin-top:0.3rem;
+      	margin-right:0.3rem;
+      }
+      footer {
+      	position:fixed;
+      	left:0;
+      	bottom:0;
+      	width:100%;
+      	height:1rem;
+      	border-top:0.03rem solid #ccc;
+      	background:#fafafa;
+      	font-size:0.38rem;
+      	display:flex;
+      	justify-content: space-around;
+      	color:#666;
+      }
+      footer .word{
+      	font-size:0.20rem;
+      	
+      }
+      footer div{
+      	text-align: center;
+         line-height:0.3rem;
+         padding-top:0.25rem;
+         
+      }
+      footer .active{
+      	color:#119aeb;
+      }
+</style>
+<body>
+	<div class="top">
+		<header>
+		   	 <div class="logo"></div>
+		   	 <!--<div class="search">-->
+		   	    <input type="text" value="大家都在搜" class="confont .icon-sousuokuangsousuo"/>
+		   	 <!--</div>-->
+		</header>
+   <div class="tittle">
+   	  <a href="" class="nav-list">推荐</a>
+   	  <a href="" class="nav-list">要闻</a>
+   	  <a href="" class="nav-list">太原</a>
+   	  <a href="" class="nav-list">视频</a>
+   	  <a href="" class="nav-list">一点号</a>
+   	  <a href="" class="nav-list">社会</a>
+   </div>
+</div>
+<div class="content-list">
+   	   <div class="content">
+   	   	<a href="javascript:;">
+   	   	   <div class="content-left">
+   	   	   	  <p>70年产权到期后，我的房子属于谁？</p>
+   	   	   	  <div class="content-left-bot">
+   	   	   	      <span class="dichan">地产圈小编</span>
+   	   	   	      <span class="pinglun">245评</span>
+   	   	   	      <span class="more"></span>
+   	   	   	  </div>
+   	   	   </div>
+   	   	   <div class="content-right">
+   	   	   	   <img src="img/home.png" alt="" />
+   	   	   </div>
+   	   	</a>
+   	   </div>
+   	     <div class="content">
+   	   	<a href="javascript:;">
+   	   	   <div class="content-left">
+   	   	   	  <p>阿里巴巴为什么叫阿里巴巴？马云的解释...</p>
+   	   	   	  <div class="content-left-bot">
+   	   	   	      <span class="dichan">投资界</span>
+   	   	   	      <span class="pinglun">245评</span>
+   	   	   	      <span class="more"></span>
+   	   	   	  </div>
+   	   	   </div>
+   	   	   <div class="content-right">
+   	   	   	   <img src="img/ali.png" alt="" />
+   	   	   </div>
+   	   	</a>
+   	   </div>
+   	     <div class="content">
+   	   	<a href="javascript:;">
+   	   	   <div class="content-left">
+   	   	   	  <p>陈浩明,求求你别秀恩爱了,我想吐！</p>
+   	   	   	  <div class="content-left-bot">
+   	   	   	      <span class="dichan">扒皮王</span>
+   	   	   	      <span class="pinglun">245评</span>
+   	   	   	      <span class="more"></span>
+   	   	   	  </div>
+   	   	   </div>
+   	   	   <div class="content-right">
+   	   	   	   <img src="img/3.png" alt="" />
+   	   	   </div>
+   	   	</a>
+   	   </div>
+   	     <div class="content">
+   	   	<a href="javascript:;">
+   	   	   <div class="content-left">
+   	   	   	  <p>看过40多岁的郁鸿飞后，再也不会觉得许晴</p>
+   	   	   	  <div class="content-left-bot">
+   	   	   	      <span class="dichan">扒皮王</span>
+   	   	   	      <span class="pinglun">245评</span>
+   	   	   	      <span class="more"></span>
+   	   	   	  </div>
+   	   	   </div>
+   	   	   <div class="content-right">
+   	   	   	   <img src="img/4.png" alt="" />
+   	   	   </div>
+   	   	</a>
+   	   </div>
+   	   
+   	     <div class="content">
+   	   	<a href="javascript:;">
+   	   	   <div class="content-left">
+   	   	   	  <p>70年产权到期后，我的房子属于谁？</p>
+   	   	   	  <div class="content-left-bot">
+   	   	   	      <span class="dichan">地产圈小编</span>
+   	   	   	      <span class="pinglun">245评</span>
+   	   	   	      <span class="more"></span>
+   	   	   	  </div>
+   	   	   </div>
+   	   	   <div class="content-right">
+   	   	   	   <img src="img/home.png" alt="" />
+   	   	   </div>
+   	   	</a>
+   	   </div>
+</div>
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-app-pages" class="anchor" href="#welcome-to-app-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to app Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
-
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/guangpf/app">App</a> is maintained by <a href="https://github.com/guangpf">guangpf</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+<footer>
+	<div class="home active" >
+	   <span class="iconfont icon-shouye" style="padding-left:0.1rem;font-size:0.5rem"></span>
+	   <br />
+	   <span class="word">首页</span>
+	</div>
+	<div class="view">
+	   <span class="iconfont icon-shipin1" style="padding-left:0.1rem;font-size:0.4rem"></span>
+	   <br />
+	   <span class="word">视频</span>
+	</div>
+	<div class="yingyong">
+	   <span class="iconfont icon-yingyong" style="padding-left:0.1rem;font-size:0.5rem"></span>
+	   <br />
+	   <span class="word">应用号</span>
+	</div>
+	<div class="me">
+	   <span class="iconfont icon-wode" style="padding-left:0.1rem;font-size:0.5rem"></span>
+	   <br />
+	   <span class="word">我的</span>
+	</div>
+</footer>
+</body>
 </html>

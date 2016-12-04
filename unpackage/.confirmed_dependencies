@@ -1,0 +1,25 @@
+{
+	"index.html": {
+		"resources": [
+			"css/index.css",
+			"js/swiper.jquery.min.js",
+			"js/swiper.animate1.0.2.min.js",
+			"js/zepto.min.js",
+			"css/swiper.min.css",
+			"css/animate.min.css",
+			"js/index.js",
+			"img/logo.png",
+			"css/font/iconfont.woff",
+			"img/ali.png",
+			"img/btn.png",
+			"css/font/iconfont.css",
+			"img/3.png",
+			"css/font1/iconfont.css",
+			"css/font1/iconfont.woff",
+			"img/home.png",
+			"img/4.png",
+			"img/alilogo.png",
+			"img/mayun.png"
+		]
+	}
+}
