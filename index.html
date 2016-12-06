@@ -12,233 +12,62 @@
     <script src="js/zepto.min.js"></script>
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/scale.js"></script>
     <script src="js/index.js"></script>
+    
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/font/iconfont.css" />
     <link rel="stylesheet" href="css/font1/iconfont.css" />
-    <script>
-       function resize(originSize,type){
-       	  type=type||"x";
-       	  if(type=="x"){
-       	  	 var widths=document.documentElement.clientWidth;
-       	  	 var scale=widths/originSize*100+"px";
-       	  	 document.getElementsByTagName("html")[0].style.fontSize=scale;
-       	  }else if(type=="y"){
-       	  	var heights=document.documentElement.clientHeight;
-       	  	scale=heights/originSize*100+"px";
-       	  	document.getElementsByTagName("html")[0].style.fontSize=scale;
-       	  }
-       }
-       $(function(){
-       	   resize(750);
-       	   
-       	   
-       	   
-       })
-       
-    </script>
 </head>
-<style>
-	html,body{
-		margin:0;
-		padding:0;
-		width:100%;
-		height:100%;
-		box-sizing:border-box;
-		background:#fafafa;
-	}
-	p,h1,h2,h3,h4,h5,ul,li,ol,span{
-		margin:0;
-		padding:0;
-		list-style: none;
-	}
-	a{
-		text-decoration:none;
-		color:#333;
-	}
-	.top{
-		width:100%;
-		position:fixed;
-		top:0;left:0;
-		z-index: 999;
-	}
-	header{
-		width:100%;
-		height:0.9rem;
-		background:#119aeb;
-		line-height: 0.9rem;
-		overflow: hidden;
-	}
-	.logo{
-		width:1.8rem;
-		height:0.4rem;
-		background:url(img/logo.png) no-repeat;
-		background-size:contain;
-		float:left;
-		margin-top:0.25em;
-		margin-left:0.2rem;
-	}
-    header input{
-    	border-bottom-left-radius:25px
-    ;
-    	border-top-left-radius: 25px;
-    	 	border-bottom-right-radius:25px
-    ;
-    	border-top-right-radius: 25px;
-    	border:none;
-    	width:60%;
-    	height:50%;
-    	float:left;
-    	background:rgba(13,122,187,0.5);
-    	text-align: left;
-    	margin-top:0.23rem;
-    	margin-left:0.5rem;
-    	color:#ccc;
-    	padding-left:0.2rem;
-    }
-    .tittle{
-    	box-sizing: border-box;
-    	height:0.8rem;
-    	width:100%;
-    	border-bottom:0.03rem solid #ccc;
-    	display:flex;
-        justify-content: space-around;
-        line-height: 0.8rem;
-        background:#fafafa;
-    }
-    .tittle a{
-    	font-size:0.35rem;
-    	font-weight: bold;
-    }
-    .tittle a:first-child{
-    	color:#129beb;
-    }
-    
-    .content-list{
-    	width:100%;
-    	padding-left:0.2rem;
-    	padding-right:0.2rem;
-    	box-sizing: border-box;
-    	margin-top:1.7rem;
-    }
-    .content{
-    	width:100%;
-    	height:2rem;
-        border-bottom:0.03rem solid #ccc;
-    	box-sizing: border-box;
-    }
-      .content a{
-      	width:100%;
-      	height:100%;
-      }
-    .content-left{
-    	box-sizing: border-box;
-    	width:60%;
-    	height:100%;
-    	position:relative;
-    	float:left;
-    	padding:0.2rem 0;
-    	padding-right:0.2rem;
-    }
-     .content-right{
-     	box-sizing: border-box;
-     	padding:0.2rem 0;
-     	width:40%;
-     	height:100%;
-     	float:left;
-     }
-     .content-right img{
-     	width:100%;
-     	height:100%;
-     }
-     .content-left p{
-     	font-size:0.38rem;
-     }
-     .content-left-bot{
-     	width:100%;
-     	height:55%;
-     	line-height: 45%;
-     }
-      .content-left-bot span{
-      	font-size:0.25rem;
-      	color:#999;
-      }
-      .more{
-      	display:inline-block;
-      	width:0.4rem;
-      	height:0.3rem;
-      	background:url(img/btn.png)no-repeat 80% 80%;
-      	background-size:contain;
-      	float:right;
-      	margin-top:0.3rem;
-      	margin-right:0.3rem;
-      }
-      footer {
-      	position:fixed;
-      	left:0;
-      	bottom:0;
-      	width:100%;
-      	height:1rem;
-      	border-top:0.03rem solid #ccc;
-      	background:#fafafa;
-      	font-size:0.38rem;
-      	display:flex;
-      	justify-content: space-around;
-      	color:#666;
-      }
-      footer .word{
-      	font-size:0.20rem;
-      	
-      }
-      footer div{
-      	text-align: center;
-         line-height:0.3rem;
-         padding-top:0.25rem;
-         
-      }
-      footer .active{
-      	color:#119aeb;
-      }
-</style>
 <body>
-	<div class="top">
+<div class="top swiper-container">
 		<header>
 		   	 <div class="logo"></div>
-		   	 <!--<div class="search">-->
-		   	    <input type="text" value="大家都在搜" class="confont .icon-sousuokuangsousuo"/>
-		   	 <!--</div>-->
+		   	 <div class="search">
+		   	      <span class="iconfont icon-sousuokuangsousuo"></span>
+		   	      <input type="text" value="搜索并订阅你感兴趣的"/>
+		   	 </div>
 		</header>
-   <div class="tittle">
-   	  <a href="" class="nav-list">推荐</a>
-   	  <a href="" class="nav-list">要闻</a>
-   	  <a href="" class="nav-list">太原</a>
-   	  <a href="" class="nav-list">视频</a>
-   	  <a href="" class="nav-list">一点号</a>
-   	  <a href="" class="nav-list">社会</a>
-   </div>
+		<!--<div class="tittle-con " id="swiper-container1">-->
+		   <div class="tittle swiper-wrapper">
+		   	  <a href="javascript:;" class="nav-list swiper-slide a-active">推荐</a>
+		   	  <a href="javascript:;" class="nav-list swiper-slide">要闻</a>
+		   	  <a href="" class="nav-list swiper-slide ">太原</a>
+		   	  <a href="" class="nav-list swiper-slide">视频</a>
+		   	  <a href="" class="nav-list swiper-slide">一点号</a>
+		   	  <a href="" class="nav-list swiper-slide">社会</a>
+		   	  <a href="" class="nav-list swiper-slide">要闻</a>
+		   	  <a href="" class="nav-list swiper-slide">太原</a>
+		   	  <a href="" class="nav-list swiper-slide">视频</a>
+		   	  <a href="" class="nav-list swiper-slide">一点号</a>
+		   	  <a href="" class="nav-list swiper-slide">社会</a>
+		   </div>
+		<!--</div>-->
+        <div class="tittle-more iconfont icon-30"></div>
 </div>
 <div class="content-list">
-   	   <div class="content">
-   	   	<a href="javascript:;">
-   	   	   <div class="content-left">
-   	   	   	  <p>70年产权到期后，我的房子属于谁？</p>
-   	   	   	  <div class="content-left-bot">
-   	   	   	      <span class="dichan">地产圈小编</span>
-   	   	   	      <span class="pinglun">245评</span>
-   	   	   	      <span class="more"></span>
-   	   	   	  </div>
-   	   	   </div>
-   	   	   <div class="content-right">
-   	   	   	   <img src="img/home.png" alt="" />
-   	   	   </div>
-   	   	</a>
+   	    <div class="content">
+	   	   	<a href="show.html" class="">
+	   	   	   <div class="content-left">
+	   	   	   	  <p>70年产权到期后，我的房子属于谁？</p>
+	   	   	   	  <div class="content-left-bot">
+	   	   	   	      <span class="dichan">地产圈小编</span>
+	   	   	   	      <span class="pinglun">245评</span>
+	   	   	   	      <span class="more"></span>
+	   	   	   	  </div>
+	   	   	   </div>
+	   	   	   <div class="content-right">
+	   	   	   	   <img src="img/home.png" alt="" />
+	   	   	   </div>
+	   	   	</a>
    	   </div>
-   	     <div class="content">
-   	   	<a href="javascript:;">
+   	    <div class="content">
+   	   	<a href="show.html">
    	   	   <div class="content-left">
-   	   	   	  <p>阿里巴巴为什么叫阿里巴巴？马云的解释...</p>
+   	   	   	  <p>阿里巴巴为什么叫阿里巴巴？马云的解释让人震惊</p>
    	   	   	  <div class="content-left-bot">
    	   	   	      <span class="dichan">投资界</span>
    	   	   	      <span class="pinglun">245评</span>
@@ -250,74 +79,82 @@
    	   	   </div>
    	   	</a>
    	   </div>
-   	     <div class="content">
-   	   	<a href="javascript:;">
-   	   	   <div class="content-left">
-   	   	   	  <p>陈浩明,求求你别秀恩爱了,我想吐！</p>
-   	   	   	  <div class="content-left-bot">
-   	   	   	      <span class="dichan">扒皮王</span>
-   	   	   	      <span class="pinglun">245评</span>
-   	   	   	      <span class="more"></span>
-   	   	   	  </div>
-   	   	   </div>
-   	   	   <div class="content-right">
-   	   	   	   <img src="img/3.png" alt="" />
-   	   	   </div>
-   	   	</a>
+   	    <div class="content">
+	   	   	<a href="show.html">
+	   	   	   <div class="content-left">
+	   	   	   	  <p>陈浩明,求求你别秀恩爱了,我想吐！</p>
+	   	   	   	  <div class="content-left-bot">
+	   	   	   	      <span class="dichan">扒皮王</span>
+	   	   	   	      <span class="pinglun">245评</span>
+	   	   	   	      <span class="more"></span>
+	   	   	   	  </div>
+	   	   	   </div>
+	   	   	   <div class="content-right">
+	   	   	   	   <img src="img/3.png" alt="" />
+	   	   	   </div>
+	   	   	</a>
    	   </div>
-   	     <div class="content">
-   	   	<a href="javascript:;">
-   	   	   <div class="content-left">
-   	   	   	  <p>看过40多岁的郁鸿飞后，再也不会觉得许晴</p>
-   	   	   	  <div class="content-left-bot">
-   	   	   	      <span class="dichan">扒皮王</span>
-   	   	   	      <span class="pinglun">245评</span>
-   	   	   	      <span class="more"></span>
-   	   	   	  </div>
-   	   	   </div>
-   	   	   <div class="content-right">
-   	   	   	   <img src="img/4.png" alt="" />
-   	   	   </div>
-   	   	</a>
+   	    <div class="content">
+	   	   	<a href="show.html">
+	   	   	   <div class="content-left">
+	   	   	   	  <p>看过40多岁的郁鸿飞后，再也不会觉得许晴</p>
+	   	   	   	  <div class="content-left-bot">
+	   	   	   	      <span class="dichan">扒皮王</span>
+	   	   	   	      <span class="pinglun">245评</span>
+	   	   	   	      <span class="more"></span>
+	   	   	   	  </div>
+	   	   	   </div>
+	   	   	   <div class="content-right">
+	   	   	   	   <img src="img/4.png" alt="" />
+	   	   	   </div>
+	   	   	</a>
    	   </div>
-   	   
-   	     <div class="content">
-   	   	<a href="javascript:;">
-   	   	   <div class="content-left">
-   	   	   	  <p>70年产权到期后，我的房子属于谁？</p>
-   	   	   	  <div class="content-left-bot">
-   	   	   	      <span class="dichan">地产圈小编</span>
-   	   	   	      <span class="pinglun">245评</span>
-   	   	   	      <span class="more"></span>
-   	   	   	  </div>
-   	   	   </div>
-   	   	   <div class="content-right">
-   	   	   	   <img src="img/home.png" alt="" />
-   	   	   </div>
-   	   	</a>
+   	    <div class="content">
+	   	   	<a href="show.html">
+	   	   	   <div class="content-left">
+	   	   	   	  <p>70年产权到期后，我的房子属于谁？</p>
+	   	   	   	  <div class="content-left-bot">
+	   	   	   	      <span class="dichan">地产圈小编</span>
+	   	   	   	      <span class="pinglun">245评</span>
+	   	   	   	      <span class="more"></span>
+	   	   	   	  </div>
+	   	   	   </div>
+	   	   	   <div class="content-right">
+	   	   	   	   <img src="img/home.png" alt="" />
+	   	   	   </div>
+	   	   	</a>
    	   </div>
 </div>
 
 <footer>
-	<div class="home active" >
-	   <span class="iconfont icon-shouye" style="padding-left:0.1rem;font-size:0.5rem"></span>
-	   <br />
-	   <span class="word">首页</span>
+	<div class="home " >
+		<a href="" class="active">
+		   <span class="iconfont icon-shouye" style="padding-left:0.1rem;font-size:0.5rem"></span>
+		   <br />
+		   <span class="word">首页</span>
+	   </a>
 	</div>
+	
 	<div class="view">
-	   <span class="iconfont icon-shipin1" style="padding-left:0.1rem;font-size:0.4rem"></span>
-	   <br />
-	   <span class="word">视频</span>
+		<a href="">
+		   <span class="iconfont icon-shipin" style="padding-left:0.1rem;font-size:0.4rem"></span>
+		   <br />
+		   <span class="word">视频</span>
+	   </a>
 	</div>
 	<div class="yingyong">
-	   <span class="iconfont icon-yingyong" style="padding-left:0.1rem;font-size:0.5rem"></span>
-	   <br />
-	   <span class="word">应用号</span>
+		<a href="">
+		   <span class="iconfont icon-yingyong" style="padding-left:0.1rem;font-size:0.5rem"></span>
+		   <br />
+		   <span class="word">应用号</span>
+	   </a>
 	</div>
 	<div class="me">
-	   <span class="iconfont icon-wode" style="padding-left:0.1rem;font-size:0.5rem"></span>
-	   <br />
-	   <span class="word">我的</span>
+		<a href="login.html">
+		   <span class="iconfont icon-wode" style="padding-left:0.1rem;font-size:0.5rem"></span>
+		   <br />
+		   <span class="word">我的</span>
+	   </a>
 	</div>
 </footer>
 </body>

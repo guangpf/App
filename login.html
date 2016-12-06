@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait"/><!--只支持写x5内核-->
+    <meta name="screen-orientation" content="portrait">  <!--只支持uc浏览器-->
+    <meta name="x5-fullscreen" content="true" /> <!--只支持写x5内核--> 
+    <meta name="full-screen" content="yes"> <!--只支持uc浏览器<-->
+    <meta name="format-detection" content="telephone=no, email=no" /> <!--禁止是被电话号码和邮箱-->	
+    <title>一点资讯</title>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/scale.js"></script>
+    <script src="js/index.js"></script>
+    <script src="css/font/iconfont.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/show.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/font/iconfont.css" />
+    <link rel="stylesheet" href="css/font1/iconfont.css" />
+</head>
+<style>
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+	.login-top{
+		width:100%;
+		height:0.9rem;
+		box-sizing:border-box;
+		background:#efefef;
+		padding:0 0.2rem;
+		text-align: center;
+		line-height:0.9rem;
+		font-size:0.4rem;
+		color:#000;
+		font-weight:bold;
+	}
+	.login-top-left{
+		float:left;
+		font-size:0.7rem;
+		color:#787878;
+		font-weight:normal;
+	}
+	.login-top-left a{
+		display: inline-block;
+		width:100%;
+		height:100%;
+	}
+	.phone-num{
+		width:80%;
+		height:18%;
+		box-sizing: border-box;
+		border:0.03rem solid #efefef;
+		margin:0 auto;
+		background:#fff;
+		margin-top:0.5rem;
+		border-radius:0.1rem;
+	}
+	.phone-top,.phone-bottom{
+		height:50%;
+		width:100%;
+		box-sizing:border-box;
+		line-height: 50%;
+		padding-left:0.2rem;
+	}
+	.phone-top{
+		border-bottom:0.03rem solid #efefef;
+	}
+	.phone-top input,.phone-bottom input{
+		border:none;
+		color:#999;
+	}
+	.phone-bottom a{
+		font-size:0.24rem;
+		/*margin-left:0.7rem;*/
+	}
+	.login-btn{
+		width:75%;
+		height:7%;
+		background:#85caf3;
+		border-radius:0.15rem;
+		text-align: center;
+		font-size:0.38rem;
+		line-height:0.8rem;
+		margin:0 auto;
+		margin-top:0.5rem;
+	}
+	.login-btn a{
+		display:inline-block;
+		width:100%;
+		height:100%;
+		color:#fff;
+		
+	}
+	.others{
+		width:75%;
+		height:0.5rem;
+		margin:0 auto;
+		margin-top:0.3rem;
+		font-size: 0.25rem;
+		text-align: center;
+		line-height: 0.8rem;
+		color:#999;
+	}
+	.others span{
+		float:left;
+	}
+	.others span:first-child,.others span:last-child{
+		display: inline-block;
+		height:0.03rem;
+		width:35%;
+		background:#999;
+		margin-top:0.39rem;
+	}
+	.others span:nth-child(2){
+		margin:0 0.08rem;
+	}
+	.logos{
+		width:75%;
+		height:1rem;
+		margin:0 auto;
+		margin-top:0.5rem;
+		display:flex;
+		justify-content: space-between;
+	}
+	.circle{
+		width:1rem;
+		height:1rem;
+	    border-radius:50%;
+	    background:#000;
+	    text-align: center;
+	    line-height: 0.5rem;
+	    
+	}
+	.circle a{
+		font-size:0.5rem;
+		color:#fff;
+		/*opacity:0.8;*/
+	}
+	.logos .circle:nth-child(1){
+		background:#00c500;
+	}
+	.logos .circle:nth-child(2){
+		background:#3fbdfa;
+	}
+	.logos .circle:nth-child(3){
+		background:#fad103;
+	}
+	.logos .circle:nth-child(4){
+		background:#f47b20;
+	}
+	.logos img{
+	
+		margin-top:0.25rem;
+	}
+	.reg{
+		width:75%;
+		height:0.8rem;
+		font-size:0.3rem;
+		text-align: center;
+		line-height: 0.8rem;
+		margin:0 auto;
+		margin-top:0.3rem;
+	}
+	.reg a{
+		color:#0d99ee;
+		width:100%;
+		height:100%;
+	}
+	.youke{
+		width:75%;
+		height:0.8rem;
+		font-size:0.3rem;
+		text-align: center;
+		line-height: 0.8rem;
+		margin:0 auto;
+		margin-top:1rem;
+	}
+</style>
+	<body>
+		<div class="login-top">
+			<a href="index.html">
+			<div class="login-top-left icon iconfont icon-xiangzuo"></div></a>
+			登录
+		</div>
+		<div class="phone-num">
+			<div class="phone-top">
+				<input type="text" value="输入手机号码/邮箱"/>
+			</div>
+			<div class="phone-bottom">
+				<input type="text" value="请输入密码"/>
+				<a href="">忘记密码？</a>
+			</div>
+		</div>
+		<div class="login-btn">
+			<a href="">登录</a>
+		</div>
+		<div class="others">
+			<span></span>
+			<span>其他登录方式</span>
+			<span></span>
+		</div>
+		<div class="logos">
+			<div class="circle ">
+				<a href="" class="">
+					<img src="img/weixin.png" alt="" width="60%" height="50%"/>
+				</a>
+			</div>
+			<div class="circle">
+				<a href=""class="">
+					<img src="img/qq.png" alt="" width="60%" height="60%"/>
+				</a>
+			</div>
+			<div class="circle">
+				<a href="" class="">
+				    <img src="img/xinlang.png" alt="" width="60%" height="50%"/>
+			    </a>
+			</div>
+			<div class="circle">
+				<a href="" class="icon iconfont icon-xiaomi"></a>
+			</div>
+		</div>
+		<div class="reg">
+			<span>没有帐号？</span><a href="">快速注册</a>
+		</div>
+		<div class="youke"><a href="">游客,先逛逛    ></a></div>
+	</body>
+</html>
