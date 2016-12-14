@@ -12,10 +12,15 @@
     <script src="js/zepto.min.js"></script>
     <script src="js/swiper.jquery.min.js"></script>
     <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/startiscroll.js"></script>
     <script src="js/scale.js"></script>
     <script src="js/index.js"></script>
+    
+    
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/iscroll.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/show.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -23,7 +28,7 @@
 
 </head>
 	<body>
-		
+		<div id="header">
 		<div class="show-top">
 			<a href="main.html">
 			<div class="direct iconfont icon-xiangzuo"></div></a>
@@ -34,7 +39,9 @@
 				<span>+</span> <span>订阅</span>
 			</div>
 		</div>
-		</a>
+		</div>
+		<div id="wrapper">
+	<div id="scroller">
 		<div class="container">
 			<p class="show-tittle">阿里巴巴为什么叫阿里巴巴？马云的解释让全场震惊！</p>
 			<p class="date">2016.9.29 <span>投资界</span></p>
@@ -177,6 +184,8 @@
 				更多精彩评论
 			</div>
 		</div>	
+		</div>
+		</div>
 		
 		
 		<div class="empty"></div>
@@ -185,13 +194,14 @@
 		<!--
         	底部
         -->
+        <div id="footer">
 		<div class="footer">
 			<div class="write">
 				<span class="iconfont icon-xiepinglun"></span>
 				写评论
 			</div>
 			<div class="message iconfont icon-xinxi"></div>
-			<div class="message iconfont icon-shoucang"></div>
+			<div class="message iconfont icon-shoucang "></div>
 			<div class="message iconfont icon-infenicon18 	"></div>
 			<div class="message iconfont icon-gengduodiandian 	"></div>
 		</div>
@@ -212,6 +222,7 @@
         		<textarea name="" rows="" cols="" style="resize:none">回复</textarea>
         		<button>提交</button>
         	</div>
+        </div>
         </div>
 	</body>
 </html>

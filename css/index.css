@@ -78,7 +78,7 @@
     .top .tittle .nav-list:not(:first-child){
     	padding:0 0.2rem;
     }
-    .tittle .a-active{
+    .tittle .active-nav{
     	color:#129beb;
     }
     .tittle-more{

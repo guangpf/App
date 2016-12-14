@@ -34,9 +34,9 @@
 				   	      <input type="text" value="搜索并订阅你感兴趣的"/ >
 				   	 </div>
 				</header>
-				<div class="tittle-con  swiper-container" >
+				<div class="tittle-con  swiper-container swiper-1" >
 				   <div class="tittle swiper-wrapper">
-				   	  <a href="javascript:;" class="nav-list swiper-slide a-active">推荐</a>
+				   	  <a href="javascript:;" class="nav-list swiper-slide active-nav">推荐</a>
 				   	  <a href="javascript:;" class="nav-list swiper-slide">要闻</a>
 				   	  <a href="" class="nav-list swiper-slide ">太原</a>
 				   	  <a href="" class="nav-list swiper-slide">视频</a>
@@ -54,7 +54,9 @@
 </div>
 <div id="wrapper">
 	<div id="scroller">
-		<div class="content-list">
+		<div class="swiper-container swiper-2" >
+				   <div class="swiper-wrapper">
+		<div class="content-list swiper-slide">
 		   	    <div class="content">
 			   	   	<a href="show.html" class="">
 			   	   	   <div class="content-left">
@@ -145,6 +147,9 @@
 			   	   	   </div>
 			   	   	</a>
 		   	   </div>
+		   	   </div>
+		   	   <div class="swiper-slide">aaa</div>
+		   	   </div>
 		</div>
 	</div>	
 </div>
@@ -183,13 +188,50 @@
 </div>
 </body>
 	<script>
-	 var swiper = new Swiper('.swiper-container', {
+//	 var swiper = new Swiper('.swiper-container', {
 //      pagination: '.swiper-pagination',
 //      nextButton: '.swiper-button-next',
 //      prevButton: '.swiper-button-prev',
-        slidesPerView:"0",
-        centeredSlides: true,
-        paginationClickable: true,
-    });
+//      slidesPerView:"0",
+//      centeredSlides: true,
+//      paginationClickable: true,
+//  });
+$(function(){
+		var mySwiper2 = new Swiper('.swiper1',{
+        watchSlidesProgress : true,
+        watchSlidesVisibility : true,
+//       direction: 'horizontal',
+        slidesPerView : 4,
+onTap: function(){
+			mySwiper3.slideTo( mySwiper2.clickedIndex)
+		}
+})
+var mySwiper3 = new Swiper('.swiper2',{
+	 direction: 'horizontal',
+        onSlideChangeStart: function(){
+		updateNavPosition()
+		}
+
+})
+function updateNavPosition(){
+		$('.swiper1 .active-nav').removeClass('active-nav')
+		var activeNav = $('.swiper1 .swiper-slide').eq(mySwiper3 .activeIndex).addClass('active-nav');
+
+
+		if (!activeNav.hasClass('swiper-slide-visible')) {
+                console.log(1);
+			if (activeNav.index()>mySwiper2.activeIndex) {
+                console.log(2);
+				var thumbsPerNav = Math.floor(mySwiper2.width/activeNav.width())-1
+				mySwiper2.slideTo(activeNav.index()-thumbsPerNav)
+			}
+			else {
+                console.log(3);
+				mySwiper2.slideTo(activeNav.index())
+			}	
+		}
+		
+    }
+	})
         </script>
 </html>

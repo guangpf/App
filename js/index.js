@@ -38,6 +38,7 @@ $(function(){
 			border:"0.03rem solid #119aeb"
 		}).find("span").html("").next("span").html("查看")
 	})
-	
+	/*收藏*/
+
 	
 })

@@ -1,0 +1,91 @@
+{
+  "index.html": {
+    "resources": [
+      "css/index.css",
+      "js/swiper.jquery.min.js",
+      "js/swiper.animate1.0.2.min.js",
+      "js/zepto.min.js",
+      "css/swiper.min.css",
+      "css/animate.min.css",
+      "js/index.js",
+      "img/logo.png",
+      "css/font/iconfont.woff",
+      "img/ali.png",
+      "img/btn.png",
+      "css/font/iconfont.css",
+      "img/3.png",
+      "css/font1/iconfont.css",
+      "css/font1/iconfont.woff",
+      "img/home.png",
+      "img/4.png",
+      "img/alilogo.png",
+      "img/mayun.png",
+      "js/scale.js",
+      "css/base.css",
+      "login.html",
+      "show.html"
+    ],
+    "refer": [
+      "login.html",
+      "show.html"
+    ]
+  },
+  "login.html": {
+    "resources": [
+      "css/show.css",
+      "index.html",
+      "css/font/iconfont.woff",
+      "js/scale.js",
+      "css/base.css",
+      "js/swiper.animate1.0.2.min.js",
+      "css/animate.min.css",
+      "css/font/iconfont.css",
+      "js/swiper.jquery.min.js",
+      "css/index.css",
+      "js/zepto.min.js",
+      "css/swiper.min.css",
+      "css/font1/iconfont.css",
+      "css/font1/iconfont.woff",
+      "js/index.js",
+      "css/font/iconfont.js",
+      "img/qq.png",
+      "img/xinlang.png",
+      "img/weixin.png",
+      "reg.html"
+    ],
+    "refer": [
+      "index.html",
+      "reg.html"
+    ]
+  },
+  "reg.html": {
+    "resources": [
+      "index.html"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "show.html": {
+    "resources": [
+      "img/mayun.png",
+      "img/alilogo.png",
+      "index.html",
+      "css/show.css",
+      "css/font/iconfont.woff",
+      "js/scale.js",
+      "css/base.css",
+      "js/swiper.animate1.0.2.min.js",
+      "css/animate.min.css",
+      "css/font/iconfont.css",
+      "js/swiper.jquery.min.js",
+      "css/index.css",
+      "js/zepto.min.js",
+      "css/swiper.min.css",
+      "js/index.js"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  }
+}
