@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-orientation" content="portrait | landscape" /><!--只支持写x5内核-->
+    <meta name="screen-orientation" content="portrait">  <!--只支持uc浏览器-->
+    <meta name="x5-fullscreen" content="true" /> <!--只支持写x5内核--> 
+    <meta name="full-screen" content="yes"> <!--只支持uc浏览器<-->
+    <meta name="format-detection" content="telephone=no, email=no" /> <!--禁止是被电话号码和邮箱-->	
+    <title>一点资讯</title>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/startiscroll.js"></script>
+    <script src="js/scale.js"></script>
+    <script src="js/index.js"></script>
+    
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/iscroll.css"/>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/font/iconfont.css" />
+</head>
+<body onload="loaded()">
+<div id="header">
+		<div class="top">
+				<header>
+				   	 <div class="logo"></div>
+				   	 <div class="search">
+				   	      <span class="iconfont icon-sousuokuangsousuo"></span>
+				   	      <input type="text" value="搜索并订阅你感兴趣的"/ >
+				   	 </div>
+				</header>
+				<div class="tittle-con  swiper-container" >
+				   <div class="tittle swiper-wrapper">
+				   	  <a href="javascript:;" class="nav-list swiper-slide a-active">推荐</a>
+				   	  <a href="javascript:;" class="nav-list swiper-slide">要闻</a>
+				   	  <a href="" class="nav-list swiper-slide ">太原</a>
+				   	  <a href="" class="nav-list swiper-slide">视频</a>
+				   	  <a href="" class="nav-list swiper-slide">一点号</a>
+				   	  <a href="" class="nav-list swiper-slide">社会</a>
+				   	  <a href="" class="nav-list swiper-slide">要闻</a>
+				   	  <a href="" class="nav-list swiper-slide">太原</a>
+				   	  <a href="" class="nav-list swiper-slide">视频</a>
+				   	  <a href="" class="nav-list swiper-slide">一点号</a>
+				   	  <a href="" class="nav-list swiper-slide">社会</a>
+				   </div>
+				</div>
+		        <div class="tittle-more iconfont icon-30"></div>
+		</div>
+</div>
+<div id="wrapper">
+	<div id="scroller">
+		<div class="content-list">
+		   	    <div class="content">
+			   	   	<a href="show.html" class="">
+			   	   	   <div class="content-left">
+			   	   	   	  <p>70年产权到期后，我的房子属于谁？</p>
+			   	   	   	  <div class="content-left-bot">
+			   	   	   	      <span class="dichan">地产圈小编</span>
+			   	   	   	      <span class="pinglun">245评</span>
+			   	   	   	      <span class="more"></span>
+			   	   	   	  </div>
+			   	   	   </div>
+			   	   	   <div class="content-right">
+			   	   	   	   <img src="img/home.png" alt="" />
+			   	   	   </div>
+			   	   	</a>
+		   	   </div>
+		   	    <div class="content">
+		   	   	<a href="show.html">
+		   	   	   <div class="content-left">
+		   	   	   	  <p>阿里巴巴为什么叫阿里巴巴？马云的解释让人震惊</p>
+		   	   	   	  <div class="content-left-bot">
+		   	   	   	      <span class="dichan">投资界</span>
+		   	   	   	      <span class="pinglun">245评</span>
+		   	   	   	      <span class="more"></span>
+		   	   	   	  </div>
+		   	   	   </div>
+		   	   	   <div class="content-right">
+		   	   	   	   <img src="img/ali.png" alt="" />
+		   	   	   </div>
+		   	   	</a>
+		   	   </div>
+		   	    <div class="content">
+			   	   	<a href="show.html">
+			   	   	   <div class="content-left">
+			   	   	   	  <p>陈浩明,求求你别秀恩爱了,我想吐！</p>
+			   	   	   	  <div class="content-left-bot">
+			   	   	   	      <span class="dichan">扒皮王</span>
+			   	   	   	      <span class="pinglun">245评</span>
+			   	   	   	      <span class="more"></span>
+			   	   	   	  </div>
+			   	   	   </div>
+			   	   	   <div class="content-right">
+			   	   	   	   <img src="img/3.png" alt="" />
+			   	   	   </div>
+			   	   	</a>
+		   	   </div>
+		   	    <div class="content">
+			   	   	<a href="show.html">
+			   	   	   <div class="content-left">
+			   	   	   	  <p>看过40多岁的郁鸿飞后，再也不会觉得许晴</p>
+			   	   	   	  <div class="content-left-bot">
+			   	   	   	      <span class="dichan">扒皮王</span>
+			   	   	   	      <span class="pinglun">245评</span>
+			   	   	   	      <span class="more"></span>
+			   	   	   	  </div>
+			   	   	   </div>
+			   	   	   <div class="content-right">
+			   	   	   	   <img src="img/4.png" alt="" />
+			   	   	   </div>
+			   	   	</a>
+		   	   </div>
+		   	    <div class="content">
+			   	   	<a href="show.html">
+			   	   	   <div class="content-left">
+			   	   	   	  <p>70年产权到期后，我的房子属于谁？</p>
+			   	   	   	  <div class="content-left-bot">
+			   	   	   	      <span class="dichan">地产圈小编</span>
+			   	   	   	      <span class="pinglun">245评</span>
+			   	   	   	      <span class="more"></span>
+			   	   	   	  </div>
+			   	   	   </div>
+			   	   	   <div class="content-right">
+			   	   	   	   <img src="img/home.png" alt="" />
+			   	   	   </div>
+			   	   	</a>
+		   	   </div>
+		   	       <div class="content">
+			   	   	<a href="show.html">
+			   	   	   <div class="content-left">
+			   	   	   	  <p>看过40多岁的郁鸿飞后，再也不会觉得许晴</p>
+			   	   	   	  <div class="content-left-bot">
+			   	   	   	      <span class="dichan">扒皮王</span>
+			   	   	   	      <span class="pinglun">245评</span>
+			   	   	   	      <span class="more"></span>
+			   	   	   	  </div>
+			   	   	   </div>
+			   	   	   <div class="content-right">
+			   	   	   	   <img src="img/4.png" alt="" />
+			   	   	   </div>
+			   	   	</a>
+		   	   </div>
+		</div>
+	</div>	
+</div>
+<div id="footer">
+<footer>
+	<div class="home " >
+		<a href="" class="active">
+		   <span class="iconfont icon-shouye" style="padding-left:0.1rem;font-size:0.5rem"></span>
+		   <br />
+		   <span class="word">首页</span>
+	   </a>
+	</div>
+	
+	<div class="view">
+		<a href="">
+		   <span class="iconfont icon-shipin" style="padding-left:0.1rem;font-size:0.4rem"></span>
+		   <br />
+		   <span class="word">视频</span>
+	   </a>
+	</div>
+	<div class="yingyong">
+		<a href="">
+		   <span class="iconfont icon-yingyong" style="padding-left:0.1rem;font-size:0.5rem"></span>
+		   <br />
+		   <span class="word">应用号</span>
+	   </a>
+	</div>
+	<div class="me">
+		<a href="login.html">
+		   <span class="iconfont icon-wode" style="padding-left:0.1rem;font-size:0.5rem"></span>
+		   <br />
+		   <span class="word">我的</span>
+	   </a>
+	</div>
+</footer>
+</div>
+</body>
+	<script>
+	 var swiper = new Swiper('.swiper-container', {
+//      pagination: '.swiper-pagination',
+//      nextButton: '.swiper-button-next',
+//      prevButton: '.swiper-button-prev',
+        slidesPerView:"0",
+        centeredSlides: true,
+        paginationClickable: true,
+    });
+        </script>
+</html>
